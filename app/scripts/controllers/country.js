@@ -21,7 +21,7 @@ angular.module('angularCountriesApp')
       }),
 
       // Images
-      $http.get('https://api.500px.com/v1/photos/search?term='+country+'&tag=landscape&image_size=4&rpp=1&consumer_key=pxJyGsnSyQnwfT2xzDUie8L9lzym7FdVYLWGCA3H', { cache: true}).then(function(response) {
+      $http.get('https://api.500px.com/v1/photos/search?term='+country+'&tag=landscape&image_size=2&rpp=1&consumer_key=pxJyGsnSyQnwfT2xzDUie8L9lzym7FdVYLWGCA3H', { cache: true}).then(function(response) {
         console.log(response);
         $scope.image = response.data.photos[0].images[0].url;
         // console.log(response.data.photos[0]);
