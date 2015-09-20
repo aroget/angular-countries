@@ -31,7 +31,7 @@ angular.module('angularCountriesApp')
       angular.forEach(countries, function(country) {
 
         var image = function(country){
-          return $http.get('https://api.500px.com/v1/photos/search?term='+  country+'&tag=landscape&&image_size=4&rpp=1&consumer_key=pxJyGsnSyQnwfT2xzDUie8L9lzym7FdVYLWGCA3H', {cache:true}).then(function(response) {
+          return $http.get('https://api.500px.com/v1/photos/search?term='+  country+'&tag=landscape&image_size=4&rpp=1&consumer_key=pxJyGsnSyQnwfT2xzDUie8L9lzym7FdVYLWGCA3H', {cache:true}).then(function(response) {
 
             if (response.data.photos[0].image_url){
               return response.data.photos[0].image_url;
