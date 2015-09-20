@@ -1,0 +1,26 @@
+<ul class="region">
+  <div class="row">
+    <li ng-repeat="country in countries | filter: query" class="col-sm-6 col-xs-12 col-md-6 {{ country.region | lowercase | formatedname }}" style=" background-image:url('{{country.image.$$state.value}}')">
+
+      <h2>
+        <a href="#/country/{{ country.name | lowercase | formatedname }}">
+          {{ country.name }}
+        </a>
+      </h2>
+
+      <div class="meta-data">
+        <p>Capital:
+          <span class="capital">
+            <a href="#/city/{{ country.capital | lowercase | formatedname }}">{{ country.capital }}</a>
+          </span>
+        </p>
+
+        <p>Region:
+          <span class="region">
+            <a href="#/region/{{ country.region | lowercase | formatedname }}">{{ country.region }}</a>
+          </span>
+        </p>
+      </div>
+    </li>
+  </div>
+</ul>

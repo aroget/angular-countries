@@ -1,0 +1,55 @@
+.index{
+  li{
+    height:500px;
+    border-left: 10px solid;
+    border-bottom: 10px solid;
+    position:relative;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center -90px;
+
+    &:nth-child(2n){
+      border-right:10px solid;
+    }
+
+    h2{
+      position: absolute;
+      bottom: 80px;
+      background: $dark;
+      width: 100%;
+      left: 0;
+      padding: 30px;
+      padding: 15px 30px;
+      font-size: 18px;
+
+      a{
+        &:hover{
+          color:$med;
+        }
+      }
+    }
+    .meta-data{
+      position: absolute;
+      bottom: 0;
+      background: $hover;
+      left: 0;
+      padding: 15px 30px;
+      width:100%;
+
+      p{
+        color:$dark;
+
+        a{
+          color:$med;
+          padding-bottom:2px;
+          border-bottom:1px solid;
+
+          &:hover{
+            color:$dark;
+          }
+        }
+      }
+
+    }
+  }
+}

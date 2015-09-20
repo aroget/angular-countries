@@ -1,0 +1,19 @@
+.city{
+  .hero{
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center center;
+    h1{
+      color:$white;
+      margin:0 auto;
+      padding:170px 0;
+      text-align:center;
+    }
+  }
+
+  .meta-data{
+    overflow:auto;
+    padding:50px 30px;
+    background:#fafafa;
+  }
+}

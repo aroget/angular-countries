@@ -1,0 +1,98 @@
+.sidebar{
+  height: 100%;
+  padding: 0px;
+  background:$med;
+
+  @media all and (max-width:770px){
+    height:auto;
+  }
+  ul{
+    @media all and (max-width:770px){
+      text-align:center;
+    }
+
+    li{
+      padding:10px 30px;
+
+      @media all and (max-width:770px){
+        width: 18%;
+        display: inline-block;
+        margin: 10px 0;
+      }
+
+      @media all and (max-width:670px){
+        width: 35%;
+        margin:0;
+      }
+
+      &.logo{
+        padding:50px 30px;
+        background: #07FFCA;
+        margin-bottom: 40px;
+
+        @media all and (max-width:770px){
+          padding:0;
+          width: 100%;
+          display: inline-block;
+        }
+
+        span{
+          width:15%;
+
+          @media all and (max-width:770px){
+            width: 100%;
+            display:block;
+            margin:30px auto;
+          }
+
+          &:before .glyphicon-flash:before{
+            font-size: 30px;
+            vertical-align: -8px;
+          }
+
+          @media all and (max-width:770px){
+            font-size: 45px;
+          }
+        }
+
+        input{
+          padding: 15px;
+          color: #fff;
+          background: rgba(5, 102, 141, .6);
+          border: 0;
+          border-radius: 30px;
+          color:$link;
+          text-align: center;
+          width: 80%;
+
+          &:focus{
+            outline:none;
+          }
+        }
+      }
+      a{
+        font-size:16px;
+        text-transform:uppercase;
+      }
+    }
+  }
+}
+
+.main-content, html, body{
+  overflow: scroll;
+  height: 100%;
+  padding:0;
+
+  @media all and (max-width:770px){
+    overflow:auto;
+  }
+}
+
+ul{
+  padding-left:0;
+  list-style:none;
+}
+
+body{
+  background:$dark;
+}

@@ -1,0 +1,18 @@
+.country{
+  .hero{
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center bottom;
+    h1{
+      color:$white;
+      margin:0 auto;
+      padding:170px 0;
+      text-align:center;
+    }
+  }
+
+  .meta-data{
+    background:#fafafa;
+    padding:50px 30px;
+  }
+}
