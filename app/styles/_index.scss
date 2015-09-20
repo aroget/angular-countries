@@ -8,8 +8,16 @@
     background-repeat:no-repeat;
     background-position:center -90px;
 
+    @media all and (max-width:770px){
+      border-left: 0;
+    }
+
     &:nth-child(2n){
       border-right:10px solid;
+
+      @media all and (max-width:770px){
+        border-right: 0;
+      }
     }
 
     h2{

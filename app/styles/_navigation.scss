@@ -17,7 +17,6 @@
       @media all and (max-width:770px){
         width: 18%;
         display: inline-block;
-        margin: 10px 0;
       }
 
       @media all and (max-width:670px){
@@ -26,14 +25,15 @@
       }
 
       &.logo{
-        padding:50px 30px;
         background: #07FFCA;
         margin-bottom: 40px;
+        padding:50px 30px;
 
         @media all and (max-width:770px){
-          padding:0;
           width: 100%;
           display: inline-block;
+          margin-bottom: 0;
+          padding-top:10px;
         }
 
         span{
@@ -42,7 +42,7 @@
           @media all and (max-width:770px){
             width: 100%;
             display:block;
-            margin:30px auto;
+            margin-bottom:15px;
           }
 
           &:before .glyphicon-flash:before{
@@ -51,7 +51,7 @@
           }
 
           @media all and (max-width:770px){
-            font-size: 45px;
+            font-size: 35px;
           }
         }
 
@@ -61,7 +61,7 @@
           background: rgba(5, 102, 141, .6);
           border: 0;
           border-radius: 30px;
-          color:$link;
+          color:$dark;
           text-align: center;
           width: 80%;
 
@@ -84,13 +84,14 @@
   padding:0;
 
   @media all and (max-width:770px){
-    overflow:auto;
+    overflow:visible;
   }
 }
 
 ul{
   padding-left:0;
   list-style:none;
+  margin-bottom:0;
 }
 
 body{
