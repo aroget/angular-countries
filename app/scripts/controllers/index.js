@@ -29,7 +29,6 @@ angular.module('angularCountriesApp')
       all.then(function(response){
         var countries = response[0].data;
         var data = [];
-        var max = countries.length;
 
         angular.forEach(countries, function(country) {
 
