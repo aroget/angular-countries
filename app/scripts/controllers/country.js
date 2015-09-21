@@ -21,23 +21,13 @@ angular.module('angularCountriesApp')
       }),
 
       // Images
-      $http.get('https://api.500px.com/v1/photos/search?term='+country+'&tag=landscape&image_size=2&rpp=1&consumer_key=pxJyGsnSyQnwfT2xzDUie8L9lzym7FdVYLWGCA3H', { cache: true}).then(function(response) {
+      $http.get('https://api.500px.com/v1/photos/search?term='+country+'&tag=landscape&image_size=4&rpp=1&consumer_key=pxJyGsnSyQnwfT2xzDUie8L9lzym7FdVYLWGCA3H', { cache: true}).then(function(response) {
         console.log(response);
         $scope.image = response.data.photos[0].images[0].url;
-        // console.log(response.data.photos[0]);
       }),
 
-      // $http.get('http://www.wikisherpa.com/api/1/page/en/' + country + '?callback=JSON_CALLBACK').then(function(response){
-      //   $scope.details = response.data;
-      //   console.log(response.data);
-      // }),
-
-      // wikisherpa
-      // https://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page=berlin&callback=?
-
-
     ]).then(function() {
-      console.log('all')
+      // console.log('all')
     })
 
   }]);
