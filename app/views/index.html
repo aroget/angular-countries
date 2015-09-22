@@ -1,5 +1,5 @@
 <ul class="index">
-  <li ng-repeat="country in countries | filter: query" class="col-sm-6 col-xs-12 col-md-6 {{ country.region | lowercase | formatedname }}" style=" background-image:url('{{country.image.$$state.value}}')">
+  <li ng-repeat="country in countries | filter: query" class="col-sm-6 col-xs-12 col-md-6 {{ country.region | lowercase | formatedname }}" style=" background-image:url('{{country.image}}')">
 
     <h2>
       <a href="#/country/{{ country.name | lowercase | formatedname }}">

@@ -28,6 +28,6 @@ angular.module('angularCountriesApp')
 
     ]).then(function() {
       // console.log('all')
-    })
+    });
 
   }]);

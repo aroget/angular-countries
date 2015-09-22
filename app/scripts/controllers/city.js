@@ -35,7 +35,7 @@ angular.module('angularCountriesApp')
 
 
       ]).then(function() {
-        console.log('all')
-      })
+        console.log('all');
+      });
 
   }]);

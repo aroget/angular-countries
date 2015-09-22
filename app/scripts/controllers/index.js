@@ -30,33 +30,24 @@ angular.module('angularCountriesApp')
         var countries = response[0].data;
         var data = [];
 
-        angular.forEach(countries, function(country) {
+        angular.forEach(countries, function(country, index) {
+          var image = function(country){
+            return $http.get('https://api.500px.com/v1/photos/search?term='+  country+'&tag=landscape&image_size=4&rpp=1&consumer_key=pxJyGsnSyQnwfT2xzDUie8L9lzym7FdVYLWGCA3H', { cache: true}).then(function(response) {
 
-          // var image = function(country){
-          //   return $http.get('https://api.500px.com/v1/photos/search?term='+  country+'&tag=landscape&image_size=4&rpp=1&consumer_key=pxJyGsnSyQnwfT2xzDUie8L9lzym7FdVYLWGCA3H', { cache: true}).then(function(response) {
-          //
-          //     response.data.photos[0].image_url;
-          //
-          //   });
-          // }
-          //
-          function getIMages(country){
-            return $http.get('https://api.500px.com/v1/photos/search?term='+  country+'&tag=landscape&image_size=4&rpp=1&consumer_key=pxJyGsnSyQnwfT2xzDUie8L9lzym7FdVYLWGCA3H', { cache: true});
+              $scope.countries[index].image = response.data.photos[0].image_url;
+            });
           }
-
-
-
-
 
           data.push({
             name : country.name,
             capital : country.capital,
             region : country.region,
-            image : getIMages(country.name).then(function(response){ return response.data.photos[0].image_url })
+            image : image(country.name)
           });
         });
 
         $scope.countries = data;
+        console.log($scope);
       })
 
   }]);

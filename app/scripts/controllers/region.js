@@ -17,8 +17,6 @@ angular.module('angularCountriesApp')
   .controller('RegionCtrl', ['$scope', '$http', '$routeParams', '$q', function ($scope, $http, $routeParams, $q) {
     var region = $routeParams.name;
 
-    var one = $q.defer();
-
     var all = $q.all([
       $http.get("https://restcountries.eu/rest/v1/region/" + region, { cache: true}),
     ]);
@@ -26,7 +24,6 @@ angular.module('angularCountriesApp')
     all.then(function(response){
       var countries = response[0].data;
       var data = [];
-      var max = countries.length;
 
       angular.forEach(countries, function(country) {
 
@@ -40,7 +37,7 @@ angular.module('angularCountriesApp')
               return 'default.png';
             }
           });
-        }
+        };
 
         data.push({
           name : country.name,
@@ -51,5 +48,5 @@ angular.module('angularCountriesApp')
       });
 
       $scope.countries = data;
-    })
+    });
   }]);
