@@ -77,7 +77,7 @@ angular.module('angularCountriesApp')
 
         });
       })
-      console.log($scope);
+
     }, function(reason) {
       console.log(reason);
     });
