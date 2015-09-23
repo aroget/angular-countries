@@ -10,16 +10,6 @@
 angular.module('angularCountriesApp')
   .controller('IndexCtrl', ['$scope', '$http', '$q', function ($scope, $http, $q) {
 
-      // $http.get('https://restcountries.eu/rest/v1/all')
-      //   .success(function(data){
-      //     console.log(data);
-      //     $scope.countries = data;
-      //
-      //   })
-      //   .error(function(error){
-      //     console.log(error);
-      //   });
-
       var one = $q.defer();
 
       var all = $q.all([
@@ -42,12 +32,12 @@ angular.module('angularCountriesApp')
             name : country.name,
             capital : country.capital,
             region : country.region,
-            image : image(country.name)
+            image : 'https://drscdn.500px.org/photo/80599269/m%3D900_k%3D1_a%3D1/9a459a51c54f39cf673078938175c8c4'
           });
         });
 
         $scope.countries = data;
-        console.log($scope);
+        // console.log($scope);
       })
 
   }]);
